@@ -16,7 +16,7 @@ export const sendEmailVerification = async ({ name, email, token }) => {
     html: `
       <p>Hello ${name}</p>
       <p>Your account is almost ready, please click the link below to verify your email</p>
-      <a href="${process.env.FRONTEND_CONFIRMATION_URL}/${token}">Confirm your Account</a>
+      <a href="${process.env.FRONTEND_URL}/auth/confirm-account/${token}">Confirm your Account</a>
       <p>if you didn't request this account, please ignore this email</p>
     `,
   });
@@ -40,7 +40,7 @@ export const sendEmailForgotPassword = async ({ name, email, token }) => {
     html: `
       <p>Hello ${name}, you have requested to reset your password</p>
       <p>Follow the link below to generate a new password</p>
-      <a href="${process.env.FRONTEND_RESET_PASSWORD_URL}/${token}">Reset your password</a>
+      <a href="${process.env.FRONTEND_URL}/auth/forgot-password/${token}">Reset your password</a>
       <p>if you didn't request this, please ignore this email</p>
     `,
   });
