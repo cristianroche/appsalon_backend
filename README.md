@@ -12,6 +12,6 @@ After cloning the repo, you need to run:
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 This should serve the project on `http://localhost:4000` by default.
