@@ -50,5 +50,5 @@ app.use("/api/appointments", appointmentRoutes);
 app.use("/api/users", userRoutes);
 
 app.listen(PORT, () => {
-  console.info(colors.blue(`Server is running on http://${HOST}:${PORT}`));
+  console.info(colors.blue(`Server is running on ${HOST}:${PORT}`));
 });
