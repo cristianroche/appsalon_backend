@@ -14,6 +14,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+const HOST = process.env.HOST || "localhost";
 
 // enable json parsing on request body
 app.use(express.json());
@@ -49,5 +50,5 @@ app.use("/api/appointments", appointmentRoutes);
 app.use("/api/users", userRoutes);
 
 app.listen(PORT, () => {
-  console.info(colors.blue(`Server is running on http://localhost:${PORT}`));
+  console.info(colors.blue(`Server is running on http://${HOST}:${PORT}`));
 });
